@@ -97,7 +97,7 @@ export default function EnhancedFunnelV2() {
               <h1 className="text-7xl font-black mb-12 tracking-tighter uppercase leading-[0.9]">
                 Precision <br/><span className="text-[#0033FF]">Protocols</span>
               </h1>
-              <p className="text-xs font-black uppercase tracking-[0.3em] text-[#64748B] mb-12">Do you know what you want?</p>
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-[#64748B] mb-12">Do you have any specific treatments you are interested in?</p>
               
               <div className="grid grid-cols-1 gap-4">
                 <button 
@@ -273,7 +273,7 @@ export default function EnhancedFunnelV2() {
               </div>
 
               <button className="w-full py-8 bg-[#0F172A] text-white rounded-full font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-4 transition-all hover:scale-[1.01] active:scale-[0.98]">
-                Start Verification <ArrowRight size={18} />
+                <a href = "https://www.enhanced.com/products/longevity?savvy_flow_version=latest">Start Verification</a>
               </button>
             </motion.div>
           )}
