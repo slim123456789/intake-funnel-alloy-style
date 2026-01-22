@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   ArrowRight, Check, ChevronRight, Activity, Zap, 
-  Shield, Beaker, Pill, Droplet, Sparkles, Calendar, Stethoscope
+  Shield, Beaker, Pill, Droplet, Sparkles, Calendar, Stethoscope, FileText
 } from 'lucide-react';
 
 // --- Types & Data ---
@@ -250,31 +250,33 @@ export default function EnhancedFunnelV2() {
             </motion.div>
           )}
 
-          {/* MEDICAL INTAKE START */}
+          {/* STEP 5: MEDICAL INTAKE FINAL TERMINAL STATE */}
           {step === 'intake' && (
-            <motion.div key="intake" variants={containerVariants} initial="initial" animate="animate" exit="exit" className="space-y-8 text-center py-10">
-              <div className="w-20 h-20 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-emerald-500/20">
-                <Shield size={32} />
+            <motion.div key="intake" variants={containerVariants} initial="initial" animate="animate" exit="exit" className="space-y-10 text-center py-12">
+              <div className="w-20 h-20 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-xl shadow-emerald-500/20">
+                <FileText size={32} />
               </div>
-              <h1 className="text-6xl font-black uppercase tracking-tighter">Clinical <br/>Verification.</h1>
-              <p className="text-slate-500 font-medium max-w-sm mx-auto">
-                We must verify your clinical suitability before proceeding with your protocol.
-              </p>
               
-              <div className="bg-white border border-slate-200 p-8 rounded-[2.5rem] space-y-4">
-                <div className="flex items-center gap-4 text-left p-4 bg-slate-50 rounded-2xl">
-                    <div className="w-8 h-8 rounded-full bg-[#0033FF] text-white flex items-center justify-center text-[10px] font-bold">01</div>
-                    <span className="text-[10px] font-black uppercase tracking-widest">Personal Identification</span>
-                </div>
-                <div className="flex items-center gap-4 text-left p-4 bg-slate-50 rounded-2xl opacity-40">
-                    <div className="w-8 h-8 rounded-full bg-slate-300 text-white flex items-center justify-center text-[10px] font-bold">02</div>
-                    <span className="text-[10px] font-black uppercase tracking-widest">Medical History Sequence</span>
-                </div>
+              <div className="space-y-4">
+                <h1 className="text-6xl font-black uppercase tracking-tighter leading-[0.9]">Medical <br/>Intake Form</h1>
+                <p className="text-slate-500 font-bold text-xs uppercase tracking-[0.2em] max-w-xs mx-auto">
+                    Complete your clinical profile to finalize protocol delivery.
+                </p>
               </div>
 
-              <button className="w-full py-8 bg-[#0F172A] text-white rounded-full font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-4 transition-all hover:scale-[1.01] active:scale-[0.98]">
-                <a href = "https://www.enhanced.com/products/longevity?savvy_flow_version=latest">Start Verification</a>
-              </button>
+              <div className="max-w-xs mx-auto pt-8">
+                <a 
+                  href="https://www.enhanced.com/products/longevity?savvy_flow_version=latest"
+                  className="w-full py-10 bg-[#0F172A] text-white rounded-[2.5rem] font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-4 hover:scale-[1.01] active:scale-[0.98] transition-all shadow-2xl"
+                >
+                  Begin Intake Sequence
+                  <ArrowRight size={18} />
+                </a>
+              </div>
+              
+              <p className="text-[9px] font-black uppercase tracking-widest text-slate-300">
+                Est. time: 3 Minutes • Encrypted & Secure
+              </p>
             </motion.div>
           )}
 
